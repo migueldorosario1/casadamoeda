@@ -1,14 +1,13 @@
 /* ==========================================================================
-   CASA DA MOEDA: ÂNCORA PÚBLICA DE CONFIANÇA (CLEC-CMB)
-   Application Logic: Presentation Stack, AI Revision & Diff Engine
+   CASA DA MOEDA: ÂNCORA PÚBLICA DE CONFIANÇA
+   Application Logic: Presentation Stack, Simple Observations & Speech Input
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   initReadingProgress();
   initFAQAccordion();
-  initNavigationHighlight();
   loadPresentationStacks();
-  loadRevisionEngines();
+  loadSavedObservations();
   initFullscreenModal();
 });
 
@@ -36,7 +35,6 @@ function initFAQAccordion() {
       const item = btn.parentElement;
       const isActive = item.classList.contains("active");
       
-      // Close other accordion items
       document.querySelectorAll(".faq-item").forEach(el => el.classList.remove("active"));
       
       if (!isActive) {
@@ -47,32 +45,7 @@ function initFAQAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Active Navigation Highlight
-   -------------------------------------------------------------------------- */
-function initNavigationHighlight() {
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 100;
-      if (window.scrollY >= top) {
-        current = sec.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${current}`) {
-        link.classList.add("active");
-      }
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   4. Cascading Vertical Presentation Stack Renderer (apresentacoes.json)
+   3. Cascading Vertical Presentation Stack Renderer (apresentacoes.json)
    -------------------------------------------------------------------------- */
 async function loadPresentationStacks() {
   try {
@@ -90,10 +63,10 @@ async function loadPresentationStacks() {
       let html = `
         <div class="stack-header">
           <h3 class="stack-title">
-            <span>📑 Espaço de Apresentações em Cascata Vertical</span>
+            <span>📑 Apresentações em Slides</span>
           </h3>
           <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
-            ${presentations.length} Versões Registradas
+            ${presentations.length} Decks Disponíveis
           </span>
         </div>
         <div class="stack-cards-vertical">
@@ -102,7 +75,7 @@ async function loadPresentationStacks() {
       presentations.forEach((pres, presIdx) => {
         const isOfficial = pres.isOfficial;
         const cardClass = isOfficial ? "presentation-card official-card" : "presentation-card";
-        const officialBadge = isOfficial ? `<span class="badge-official">🔒 OFICIAL</span>` : "";
+        const officialBadge = isOfficial ? `<span class="badge-official">🔒 VERSÃO OFICIAL</span>` : "";
 
         html += `
           <div class="${cardClass}" id="pres-card-${parteId}-${presIdx}">
@@ -138,7 +111,7 @@ async function loadPresentationStacks() {
                 </div>
                 
                 <button class="btn-icon" onclick="openFullscreenModal('${pres.slidesFolder}', '${parteId}', ${presIdx})">
-                  🔍 Zoom
+                  🔍 Ampliar
                 </button>
               </div>
             </div>
@@ -166,7 +139,6 @@ function generateThumbnails(parteId, presIdx, folder, count) {
   return thumbs;
 }
 
-// Global slide state storage
 const slideState = {};
 
 window.changeSlide = function(parteId, presIdx, direction, totalCount) {
@@ -201,155 +173,130 @@ function updateSlideUI(parteId, presIdx, slideNum, totalCount) {
   if (imgEl) imgEl.src = `${folder}/slide_${padded}.png`;
   if (countEl) countEl.textContent = padded;
 
-  // Update thumbnail active status
   card.querySelectorAll(".slide-thumb").forEach((th, idx) => {
     th.classList.toggle("active", (idx + 1) === slideNum);
   });
 }
 
 /* --------------------------------------------------------------------------
-   5. AI Revision Engine & Diff Viewer (revisions.json)
+   4. Simple & Amicable Observations Engine (Audio / Text)
    -------------------------------------------------------------------------- */
-async function loadRevisionEngines() {
-  try {
-    const response = await fetch("revisions.json");
-    if (!response.ok) return;
-    const revisionsData = await response.json();
-
-    Object.keys(revisionsData).forEach(parteId => {
-      const container = document.getElementById(`rev-${parteId}`);
-      if (!container) return;
-
-      const revs = revisionsData[parteId];
-      if (!revs) return;
-
-      renderRevisionBox(container, parteId, revs);
-    });
-
-  } catch (err) {
-    console.warn("No revisions.json loaded or failed parsing:", err);
+window.toggleObsInput = function(parteId) {
+  const area = document.getElementById(`obs-input-${parteId}`);
+  if (area) {
+    area.classList.toggle("active");
   }
-}
+};
 
-function renderRevisionBox(container, parteId, revs) {
-  const keys = Object.keys(revs);
-  if (keys.length === 0) return;
+window.saveObservation = function(parteId) {
+  const txtArea = document.getElementById(`obs-text-${parteId}`);
+  if (!txtArea || !txtArea.value.trim()) return;
 
-  let tabsHtml = `<button class="rev-tab-btn active" onclick="switchRevisionTab('${parteId}', 'official')">🔒 Texto Oficial</button>`;
-  keys.forEach(k => {
-    tabsHtml += `<button class="rev-tab-btn" onclick="switchRevisionTab('${parteId}', '${k}')">${revs[k].versionTag || k}</button>`;
+  const text = txtArea.value.trim();
+  const obsObj = {
+    id: Date.now(),
+    text: text,
+    date: new Date().toLocaleDateString("pt-BR") + " " + new Date().toLocaleTimeString("pt-BR", {hour: '2-digit', minute:'2-digit'})
+  };
+
+  const key = `cmb_obs_${parteId}`;
+  const existing = JSON.parse(localStorage.getItem(key) || "[]");
+  existing.unshift(obsObj);
+  localStorage.setItem(key, JSON.stringify(existing));
+
+  txtArea.value = "";
+  renderObservations(parteId);
+};
+
+function loadSavedObservations() {
+  ["parte_2", "parte_3", "parte_6"].forEach(parteId => {
+    renderObservations(parteId);
   });
-
-  const firstRev = revs[keys[0]];
-
-  container.innerHTML = `
-    <div class="revision-header">
-      <div class="revision-title-group">
-        <div class="revision-icon">🤖</div>
-        <div>
-          <div class="revision-title">Espaço de Correção com IA — Texto da Parte</div>
-          <div style="font-size: 0.8rem; color: var(--text-muted);">Aplicações de regras de refinamento ditadas por voz</div>
-        </div>
-      </div>
-      <div class="revision-tabs" id="rev-tabs-${parteId}">
-        ${tabsHtml}
-      </div>
-    </div>
-
-    <div id="rev-content-area-${parteId}">
-      ${renderOfficialTextPlaceholder(parteId)}
-    </div>
-  `;
-
-  // Save revision data on container
-  container.dataset.revsJson = JSON.stringify(revs);
 }
 
-function renderOfficialTextPlaceholder(parteId) {
-  return `
-    <div class="revision-metadata-card">
-      <div class="rev-meta-item">
-        <span class="badge-official">🔒 TEXTO OFICIAL VIGENTE</span>
-      </div>
-      <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 8px;">
-        Exibindo o texto base de referência para esta Parte. Selecione uma aba de revisão acima para visualizar a instrução de voz do Miguel, a regra destilada e o comparativo (diff) em tempo real.
-      </p>
-    </div>
-  `;
-}
+function renderObservations(parteId) {
+  const listEl = document.getElementById(`obs-list-${parteId}`);
+  if (!listEl) return;
 
-window.switchRevisionTab = function(parteId, revKey) {
-  const container = document.getElementById(`rev-${parteId}`);
-  if (!container) return;
+  const key = `cmb_obs_${parteId}`;
+  const observations = JSON.parse(localStorage.getItem(key) || "[]");
 
-  const tabs = document.querySelectorAll(`#rev-tabs-${parteId} .rev-tab-btn`);
-  tabs.forEach(t => t.classList.remove("active"));
-  
-  // Highlight active tab
-  event.target.classList.add("active");
-
-  const contentArea = document.getElementById(`rev-content-area-${parteId}`);
-  if (revKey === 'official') {
-    contentArea.innerHTML = renderOfficialTextPlaceholder(parteId);
+  if (observations.length === 0) {
+    listEl.innerHTML = `<div style="font-size: 0.85rem; color: var(--text-subtle); font-style: italic;">Nenhuma observação enviada ainda para este capítulo.</div>`;
     return;
   }
 
-  const revsData = JSON.parse(container.dataset.revsJson || "{}");
-  const rev = revsData[revKey];
-  if (!rev) return;
-
-  const baselineText = getParteBaselineText(parteId);
-  const diffHtml = computeSimpleDiff(baselineText, rev.content);
-
-  contentArea.innerHTML = `
-    <div class="revision-metadata-card">
-      <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
-        <span class="badge-version" style="background-color: var(--revision-purple); color: #fff;">${rev.versionTag}</span>
-        <span class="badge-version">${rev.badge || 'Revisão IA'}</span>
-        <span class="badge-version" style="color: var(--text-muted);">${rev.date}</span>
+  let html = "";
+  observations.forEach(obs => {
+    html += `
+      <div class="obs-item">
+        <div class="obs-item-meta">
+          <span>📅 ${obs.date}</span>
+          <span style="color: var(--primary-emerald);">• Observação Gravada</span>
+        </div>
+        <div>"${escapeHtml(obs.text)}"</div>
       </div>
+    `;
+  });
+  listEl.innerHTML = html;
+}
 
-      <div class="rev-meta-item">
-        <div class="rev-meta-label">🎙️ Instrução Crua por Voz (Miguel):</div>
-        <div class="rev-voice-prompt">"${rev.rawInstruction}"</div>
-      </div>
+// Audio Recording via Web Speech Recognition (Browser Dictation)
+let recognitionInstance = null;
 
-      <div class="rev-meta-item">
-        <div class="rev-meta-label">✍️ Regra Destilada (Antigravity IA):</div>
-        <div class="rev-ai-rule">${rev.summarizedRule}</div>
-      </div>
-    </div>
+window.toggleAudioRecording = function(parteId) {
+  const btn = document.getElementById(`btn-mic-${parteId}`);
+  const txtArea = document.getElementById(`obs-text-${parteId}`);
 
-    <div style="margin-bottom: 10px; font-size: 0.85rem; color: var(--accent-gold); font-weight: 600;">
-      🔍 Comparativo de Alterações (Diff Baseline vs. ${rev.versionTag}):
-    </div>
-    
-    <div class="diff-container">
-      ${diffHtml}
-    </div>
-  `;
-};
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    alert("Ditado por voz não suportado neste navegador. Por favor digite sua observação na caixa de texto.");
+    return;
+  }
 
-function getParteBaselineText(parteId) {
-  const baselineTexts = {
-    "parte_2": "Entre 2007 e 2016, o Brasil operava o Sicobe com contagem em tempo real e arrecadação de R$ 1,65 bi por ano em selos de bebidas.",
-    "parte_3": "O debate sobre certificação exige ação por causa das leis europeias e do projeto do ouro que tramita no Congresso.",
-    "parte_6": "O Esquema CLEC-CMB é dividido em 3 camadas de segurança onde a Casa da Moeda produz os dispositivos e faz a certificação."
+  if (btn.classList.contains("recording")) {
+    if (recognitionInstance) recognitionInstance.stop();
+    btn.classList.remove("recording");
+    btn.textContent = "🎙️ Ditar Áudio";
+    return;
+  }
+
+  recognitionInstance = new SpeechRecognition();
+  recognitionInstance.lang = "pt-BR";
+  recognitionInstance.continuous = true;
+  recognitionInstance.interimResults = true;
+
+  btn.classList.add("recording");
+  btn.textContent = "🔴 Gravando... (Clique p/ Parar)";
+
+  recognitionInstance.onresult = (event) => {
+    let transcript = "";
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      transcript += event.results[i][0].transcript;
+    }
+    txtArea.value = transcript;
   };
-  return baselineTexts[parteId] || "Texto oficial de referência.";
-}
 
-function computeSimpleDiff(oldText, newText) {
-  // Highlights additions in green and deletions in red
-  return `<div><del>${escapeHtml(oldText)}</del></div><div style="margin-top: 10px;"><ins>${escapeHtml(newText)}</ins></div>`;
-}
+  recognitionInstance.onerror = (event) => {
+    console.error("Speech Recognition Error:", event.error);
+    btn.classList.remove("recording");
+    btn.textContent = "🎙️ Ditar Áudio";
+  };
+
+  recognitionInstance.onend = () => {
+    btn.classList.remove("recording");
+    btn.textContent = "🎙️ Ditar Áudio";
+  };
+
+  recognitionInstance.start();
+};
 
 function escapeHtml(str) {
   return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 /* --------------------------------------------------------------------------
-   6. Fullscreen Slide Modal
+   5. Fullscreen Slide Modal
    -------------------------------------------------------------------------- */
 function initFullscreenModal() {
   const modal = document.getElementById("slide-modal");
