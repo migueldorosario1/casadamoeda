@@ -1,0 +1,38 @@
+{
+  "parte_2": {
+    "R1": {
+      "title": "Ajuste na Métrica de Perda de Faturamento Fiscais",
+      "author": "Miguel do Rosário & Antigravity IA",
+      "versionTag": "R1 (Voz 28/07)",
+      "date": "2026-07-28",
+      "badge": "Revisado por Voz · Precisão de Dados",
+      "rawInstruction": "destaca melhor que a perda de 1 bilhão e 650 milhões por ano em 2016 não era só o preço do papel do selo fiscal mas sim o sistema completo de contagem em tempo real e telemetria nas fábricas de bebidas",
+      "summarizedRule": "Reforçar a natureza sistêmica e de infraestrutura digital da receita do Sicobe (R$ 1,65 bi em 2016), destacando que a cifra decorria da contagem em linha e telemetria em tempo real, e não do valor unitário da etiqueta física.",
+      "content": "### O DIAGNÓSTICO: O QUE O BRASIL PERDEU\n\nEntre 2007 e 2016, o Brasil operou um dos maiores e mais modernos esquemas de rastreabilidade fiscal do mundo. Através do **Sicobe** (Sistema de Controle de Produção de Bebidas) e do **Scorpios**, a Casa da Moeda do Brasil (CMB) contava e inspecionava, em tempo real, toda a produção nacional de bebidas frias e cigarros.\n\nEm 2016, essa operação gerou **R$ 1,65 bilhão em faturamento** para a estatal — o equivalente a mais de 75% de toda a sua receita operacional. Contudo, em outubro de 2016, um ato declaratório da Receita Federal desligou o sistema por canetada.\n\n> ⚠️ **Precisão Conceitual:** O valor de R$ 1,65 bi/ano não vinha da venda de etiquetas de papel. Vinha da **infraestrutura de contagem inteligente em linha, telemetria industrial em tempo real e rastreabilidade ponta a ponta**. Ao desligar o sistema, o Brasil não economizou em selos: desmantelou sua maior plataforma de integridade fiscal e logística."
+    }
+  },
+  "parte_3": {
+    "R1": {
+      "title": "Destaque ao Mandato Legal do PL 3.025/2023",
+      "author": "Miguel do Rosário & Antigravity IA",
+      "versionTag": "R1 (Voz 28/07)",
+      "date": "2026-07-28",
+      "badge": "Revisado por Voz · Marco Regulatório",
+      "rawInstruction": "coloca bem visível que o PL do ouro aprovado na câmara em abril de 2026 não é uma especulação teórica é uma lei aprovada que já dá exclusividade à Casa da Moeda para certificar a marcação física e digital",
+      "summarizedRule": "Sublinhar a aprovação do PL 3.025/2023 na Câmara dos Deputados em 22/04/2026 como a prova empírica de que o Poder Legislativo já reconheceu a CMB como certificadora nacional exclusiva.",
+      "content": "### POR QUE AGORA: A JANELA DE 18 MESES\n\nO debate sobre a certificação logística não é teórico. Uma convergência regulatória sem precedentes exige ação imediata:\n\n1. **Passaporte Digital de Produto (DPP) na Europa:** A partir de 19/07/2026, o registro de produtos da UE entra em operação. Exportadores brasileiros de baterias, têxteis e alumínio precisarão de identidades digitais auditáveis.\n2. **O Mandato Concreto do PL 3.025/2023:** Em **22 de abril de 2026**, a Câmara dos Deputados aprovou o projeto de lei que institui a rastreabilidade obrigatória do ouro no Brasil. A lei atribui à **Casa da Moeda a certificação EXCLUSIVA da marcação físico-digital**, com custeio garantido por taxas previstas na legislação.\n\n> 📜 **Mandato Legal Ativo:** A tese do CLEC-CMB não é especulativa. O Congresso Nacional já definiu por lei que a certificação pública de integridade pertence à Casa da Moeda."
+    }
+  },
+  "parte_6": {
+    "R1": {
+      "title": "Esclarecimento das 3 Camadas do CLEC-CMB",
+      "author": "Miguel do Rosário & Antigravity IA",
+      "versionTag": "R1 (Voz 28/07)",
+      "date": "2026-07-28",
+      "badge": "Revisado por Voz · Arquitetura",
+      "rawInstruction": "deixa claríssimo no esquema das três camadas que a Casa da Moeda não quer fabricar todos os lacres nem fechar mercado o lacre é multifornecedor e a CMB cuida da identidade de custódia e do registro",
+      "summarizedRule": "Demarcar a separação de papéis na arquitetura CLEC-CMB: a fabricação dos dispositivos permanece em ambiente multifornecedor privado, enquanto a Casa da Moeda atua na emissão da identidade digital de custódia e governança do registro.",
+      "content": "### A SOLUÇÃO: ESQUEMA CLEC-CMB\n\nO Esquema CMB de Certificação de Lacres Eletrônicos e Cadeia de Custódia (CLEC-CMB) assenta-se sobre **três camadas complementares** que não se confundem:\n\n1. **Camada 1 · Lacre Eletrônico Certificado (Dispositivo Físico):** Fabricado por múltiplos fornecedores privados credenciados, contendo evidência mecânica de violação + chips RFID/NFC. **Regime 100% aberto e multifornecedor.**\n2. **Camada 2 · Identidade Digital de Custódia (CMB):** O registro soberano administrado exclusivamente pela **Casa da Moeda**, vinculando lacre, carga, manifesto de transporte, operador e eventos em trilha criptográfica.\n3. **Camada 3 · Selo Eletrônico ICP-Brasil (ITI):** A infraestrutura de chave pública que atribui validade jurídica e assinatura digital de PJ sobre os eventos registrados."
+    }
+  }
+}

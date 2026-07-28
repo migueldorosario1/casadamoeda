@@ -1,0 +1,98 @@
+{
+  "parte_2": [
+    {
+      "versionTag": "R3 (v7.0)",
+      "name": "O Futuro do Brasil: Controle Logístico Nacional (v7)",
+      "date": "2026-07-20",
+      "isOfficial": true,
+      "slidesFolder": "public/slides/parte_2/r3",
+      "slidesCount": 44,
+      "pdfLink": "public/downloads/O_Futuro_do_Brasil_Controle_Logistico_Nacional v7.pptx.pdf",
+      "pptxLink": "public/downloads/O_Futuro_do_Brasil_Controle_Logistico_Nacional v7.pptx.pdf"
+    },
+    {
+      "versionTag": "R2 (v4.0)",
+      "name": "CMB Controle Logístico - Apresentação Executiva v4",
+      "date": "2026-07-15",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_2/r2",
+      "slidesCount": 45,
+      "pdfLink": "public/downloads/CMB_controle_logistico_v4.pdf",
+      "pptxLink": "public/downloads/CMB_controle_logistico_v4.pptx"
+    },
+    {
+      "versionTag": "R1 (v3.0)",
+      "name": "CMB Controle Logístico - Apresentação Executiva v3",
+      "date": "2026-07-10",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_2/r1",
+      "slidesCount": 21,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/CMB_controle_logistico_v3.pptx"
+    }
+  ],
+  "parte_4": [
+    {
+      "versionTag": "R3 (v3.0)",
+      "name": "Casa da Moeda: Tese Final e Evidência Internacional",
+      "date": "2026-07-18",
+      "isOfficial": true,
+      "slidesFolder": "public/slides/parte_4/r3",
+      "slidesCount": 20,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/CMB_tese_final.pptx"
+    },
+    {
+      "versionTag": "R2 (v2.0)",
+      "name": "CMB: Eixo de Certificação Nacional e Benchmarks",
+      "date": "2026-07-12",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_4/r2",
+      "slidesCount": 20,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/CMB_eixo_certificacao_nacional.pptx"
+    },
+    {
+      "versionTag": "R1 (v1.0)",
+      "name": "CMB: Certificadora Nacional de Rastreabilidade",
+      "date": "2026-07-05",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_4/r1",
+      "slidesCount": 19,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/CMB_certificadora_nacional.pptx"
+    }
+  ],
+  "parte_6": [
+    {
+      "versionTag": "R3 (v4.0)",
+      "name": "Esquema CLEC-CMB v4.0: Arquitetura e Solução Nacional",
+      "date": "2026-07-22",
+      "isOfficial": true,
+      "slidesFolder": "public/slides/parte_6/r3",
+      "slidesCount": 45,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/CLEC-CMB_v4.0_Controle_Logistico_Nacional.pptx"
+    },
+    {
+      "versionTag": "R2 (v3.0)",
+      "name": "Casa da Moeda: Controle Logístico Nacional v4",
+      "date": "2026-07-16",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_6/r2",
+      "slidesCount": 45,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/Casa_da_Moeda_Controle_Logistico_Nacional_v4.pptx"
+    },
+    {
+      "versionTag": "R1 (v1.0)",
+      "name": "Casa da Moeda: Controle Logístico Nacional (Original)",
+      "date": "2026-07-08",
+      "isOfficial": false,
+      "slidesFolder": "public/slides/parte_6/r1",
+      "slidesCount": 45,
+      "pdfLink": "",
+      "pptxLink": "public/downloads/Casa_da_Moeda_Controle_Logistico_Nacional.pptx"
+    }
+  ]
+}
