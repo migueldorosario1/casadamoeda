@@ -1,15 +1,44 @@
 /* ==========================================================================
    CASA DA MOEDA: ÂNCORA PÚBLICA DE CONFIANÇA
-   Application Logic: Presentation Stack, Simple Observations & Speech Input
+   Application Logic: Theme Switcher, Presentation Stack & Observations
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initTheme();
   initReadingProgress();
   initFAQAccordion();
   loadPresentationStacks();
   loadSavedObservations();
   initFullscreenModal();
 });
+
+/* --------------------------------------------------------------------------
+   0. Theme Switcher (Modo Dia / Noite)
+   -------------------------------------------------------------------------- */
+function initTheme() {
+  const savedTheme = localStorage.getItem("cmb_theme") || "dark";
+  document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeButtonUI(savedTheme);
+}
+
+window.toggleTheme = function() {
+  const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  
+  document.documentElement.setAttribute("data-theme", newTheme);
+  localStorage.setItem("cmb_theme", newTheme);
+  updateThemeButtonUI(newTheme);
+};
+
+function updateThemeButtonUI(theme) {
+  const btn = document.getElementById("theme-toggle-btn");
+  if (!btn) return;
+  if (theme === "light") {
+    btn.innerHTML = "🌙 Noite";
+  } else {
+    btn.innerHTML = "☀️ Dia";
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. Reading Progress Bar

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,9 +65,12 @@
         </ul>
       </nav>
       
-      <a href="https://drive.google.com/file/d/1EeXMrtevxc-XDyd5yL2-Rr6NEjkyGd6z/view" target="_blank" rel="noopener" class="header-cta">
-        📄 Baixar PDF
-      </a>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()">☀️ Dia</button>
+        <a href="https://drive.google.com/file/d/1EeXMrtevxc-XDyd5yL2-Rr6NEjkyGd6z/view" target="_blank" rel="noopener" class="header-cta">
+          📄 Baixar PDF
+        </a>
+      </div>
     </div>
   </header>
 
@@ -213,9 +216,7 @@
               <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_2')">Salvar Observação</button>
             </div>
           </div>
-          <div class="obs-list" id="obs-list-parte_2">
-            <!-- Observações salvas aparecerão aqui -->
-          </div>
+          <div class="obs-list" id="obs-list-parte_2"></div>
         </div>
 
       </div>
@@ -268,7 +269,7 @@
 
         <div class="synthesis-card" style="border-left-color: var(--accent-gold); margin-top: 30px;">
           <span class="badge-official" style="margin-bottom: 12px; display: inline-block;">MARCO LEGAL APROVADO</span>
-          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin-bottom: 10px;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-title); margin-bottom: 10px;">
             Aprovação do Projeto de Lei da Rastreabilidade do Ouro (PL 3.025/2023)
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
@@ -358,8 +359,8 @@
           <p class="section-subtitle">Garantir a governança pública sobre as chaves e os registros de trânsito de mercadorias no território nacional.</p>
         </div>
 
-        <div style="padding: 26px; background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-          <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-main); line-height: 1.6;">
+        <div style="padding: 26px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <blockquote style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-title); line-height: 1.6;">
             "Soberania é ter padrões abertos, múltiplos fornecedores privados de lacres e chaves sob governança da Casa da Moeda do Brasil. O controle logístico não substitui a fiscalização: produz evidências digitais auditáveis."
           </blockquote>
         </div>
@@ -387,7 +388,7 @@
             </div>
           </div>
 
-          <div class="benchmark-card" style="border-top: 4px solid var(--primary-emerald); background: rgba(16, 185, 129, 0.05);">
+          <div class="benchmark-card" style="border-top: 4px solid var(--primary-emerald);">
             <div class="benchmark-subtitle" style="color: var(--primary-emerald);">Nível 2 · Registro Soberano</div>
             <div class="benchmark-title">Identidade Digital da Casa da Moeda</div>
             <div class="benchmark-body">
@@ -405,7 +406,7 @@
         </div>
 
         <!-- Consultoria da Ceitec -->
-        <div class="synthesis-card" style="background: rgba(17, 24, 39, 0.7); border: 1px solid var(--border-highlight); margin-bottom: 40px;">
+        <div class="synthesis-card" style="margin-bottom: 40px;">
           <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--primary-emerald); margin-bottom: 8px;">
             💡 Papel Estratégico da Ceitec: Consultoria e Estudos Tecnológicos
           </h3>
@@ -597,7 +598,7 @@
           </p>
         </div>
         <div>
-          <div style="font-weight: 600; color: var(--text-main); margin-bottom: 8px;">Aviso Legal</div>
+          <div style="font-weight: 600; color: var(--text-title); margin-bottom: 8px;">Aviso Legal</div>
           <p class="footer-disclaimer">
             Proposta independente de política pública.
           </p>
