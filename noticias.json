@@ -5,11 +5,11 @@
     "badge": "🇧🇷 Brasil · Legislação",
     "badgeClass": "badge-brasil",
     "date": "Julho / 2026",
-    "title": "Congresso Aprova PL da Rastreabilidade Obrigatória do Ouro (PL 3.025/2023)",
-    "excerpt": "A Câmara dos Deputados aprovou o marco legal que estabelece a rastreabilidade do ouro em território nacional, definindo a Casa da Moeda do Brasil como a entidade pública responsável pela marcação e custódia digital.",
+    "title": "Congresso Avança na Rastreabilidade Obrigatória do Ouro (PL 3.025/2023)",
+    "excerpt": "A Câmara dos Deputados tramita o marco legal que estabelece a rastreabilidade fiscal e física do ouro no Brasil, definindo a Casa da Moeda do Brasil como autoridade pública para marcação e custódia digital.",
     "impact": "Impacto: Casa da Moeda como Certificadora Oficial",
     "source": "Câmara dos Deputados",
-    "url": "https://www.camara.leg.br/propostas-legislativas/2367123"
+    "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2367123"
   },
   {
     "id": 2,
@@ -17,11 +17,11 @@
     "badge": "🇪🇺 União Europeia · Regulamento",
     "badgeClass": "badge-eu",
     "date": "Julho / 2026",
-    "title": "União Europeia Torna Obrigatório o Passaporte Digital de Produto (DPP)",
-    "excerpt": "Regulamento comunitário exige que mercadorias importadas pela UE possuam registro auditável de origem e cadeia de custódia digital, afetando diretamente as exportações brasileiras.",
+    "title": "União Europeia Publica Regulamento do Passaporte Digital de Produto (DPP)",
+    "excerpt": "O Regulamento Europeu (UE 2024/1781) exige que mercadorias e commodities exportadas para a Europa possuam registro digital auditável de origem e sustentabilidade.",
     "impact": "Exigência de Rastreabilidade para Exportação",
-    "source": "Comissão Europeia",
-    "url": "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-digital-passport_en"
+    "source": "União Europeia (EUR-Lex)",
+    "url": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1781"
   },
   {
     "id": 3,
@@ -30,10 +30,10 @@
     "badgeClass": "badge-global",
     "date": "Junho / 2026",
     "title": "KOMSCO Consolida Migração para Serviços de Identidade Digital Soberana",
-    "excerpt": "A Casa da Moeda da Coreia do Sul atinge mais de 80% de receita proveniente de certificação digital, identidades de produtos e autenticação logística de alto desempenho.",
-    "impact": "Referência de Diversificação Digital",
-    "source": "KOMSCO Official Press",
-    "url": "https://www.komsco.com/eng/contents/page_520.do"
+    "excerpt": "A Casa da Moeda da Coreia do Sul atinge marco histórico com a expansão de serviços de certificação digital, identidades de produtos e logística soberana.",
+    "impact": "Referência Internacional de Diversificação",
+    "source": "KOMSCO (Portal Oficial)",
+    "url": "https://www.komsco.com/eng/main.do"
   },
   {
     "id": 4,
@@ -41,11 +41,11 @@
     "badge": "🇩🇪 Alemanha · Soberania",
     "badgeClass": "badge-global",
     "date": "Maio / 2026",
-    "title": "Bundesdruckerei Expande Operações da D-Trust no Bloco Europeu",
-    "excerpt": "A estatal alemã supera € 1,1 bilhão em receita operando como Autoridade Certificadora pública para infraestruturas críticas e rastreamento fiscal de cargas.",
-    "impact": "Faturamento Público em Certificação",
+    "title": "Bundesdruckerei Expande Operações da D-Trust para Infraestrutura Crítica",
+    "excerpt": "A estatal alemã de impressão e segurança consolida sua atuação como Autoridade Certificadora pública para logística fiscal, selagem digital e infraestruturas do Estado.",
+    "impact": "Modelo de Atuação Estatual Europeu",
     "source": "Bundesdruckerei Group",
-    "url": "https://www.bundesdruckerei.de/de/Unternehmen/D-TRUST"
+    "url": "https://www.bundesdruckerei.de/de"
   },
   {
     "id": 5,
@@ -53,11 +53,11 @@
     "badge": "🇧🇷 Brasil · Fiscalização",
     "badgeClass": "badge-brasil",
     "date": "Julho / 2026",
-    "title": "Estudo Destaca Recuperação de R$ 1,65 Bilhão com Reativação de Contagem Inteligente",
-    "excerpt": "Relatório técnico aponta que a reintrodução do sistema de telemetria e lacres eletrônicos sob governança da Casa da Moeda é a medida mais célere para combate à sonegação fiscal.",
-    "impact": "Proteção do Fisco e Receita Pública",
-    "source": "Ministério da Fazenda",
-    "url": "https://www.gov.br/fazenda/pt-br"
+    "title": "Casa da Moeda Fortalece Soluções de Rastreabilidade e Governança Pública",
+    "excerpt": "Com tecnologia soberana de autenticação física e digital, a Casa da Moeda do Brasil atua na proteção do fisco, rastreamento de produtos regulados e combate à sonegação fiscal.",
+    "impact": "Soberania e Proteção da Receita",
+    "source": "Casa da Moeda do Brasil",
+    "url": "https://www.casadamoeda.gov.br/"
   },
   {
     "id": 6,
@@ -65,10 +65,10 @@
     "badge": "🇫🇷 França · Custódia",
     "badgeClass": "badge-eu",
     "date": "Abril / 2026",
-    "title": "IN Groupe Assume Certificação de Rastreabilidade em Portos Europeus",
-    "excerpt": "A gráfica pública francesa firmou acordo internacional para operar como autoridade de custódia e selagem digital em rotas marítimas de contêineres.",
+    "title": "IN Groupe Atua na Certificação Digital e Segurança de Fronteiras Marítimas",
+    "excerpt": "A estatal francesa de moeda e soluções de identidade lidera projetos de custódia e selagem digital para contêineres e rotas de comércio internacional na Europa.",
     "impact": "Custódia Digital em Logística Marítima",
-    "source": "IN Groupe Press",
-    "url": "https://ingroupe.com/en/"
+    "source": "IN Groupe França",
+    "url": "https://ingroupe.com"
   }
 ]
