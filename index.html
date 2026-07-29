@@ -58,15 +58,11 @@
           <li class="nav-dropdown">
             <button class="dropdown-toggle">Recursos ▾</button>
             <div class="dropdown-menu">
-              <a href="#forum">💬 Fórum de observações</a>
               <a href="#videoteca">🎥 Videoteca pública</a>
               <a href="#noticias">Canal de notícias</a>
               <a href="#faq">Perguntas frequentes</a>
               <a href="#downloads">Downloads e fontes</a>
             </div>
-          </li>
-          <li>
-            <a href="#forum" class="nav-forum-btn" style="background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.88rem; font-weight: 600; transition: all 0.2s ease;">💬 Fórum público</a>
           </li>
         </ul>
       </nav>
@@ -330,26 +326,7 @@
         <!-- Cascata Vertical de Apresentações (Parte 2) -->
         <div id="stack-parte_2" class="presentation-stack-container" data-parte="parte_2"></div>
 
-        <!-- Espaço de Observação Amigável (Parte 2) -->
-        <div class="observation-box" id="obs-box-parte_2" data-parte="parte_2">
-          <div class="obs-header">
-            <div class="obs-title">💬 Observações e sugestões do capítulo</div>
-            <button class="btn-add-obs" onclick="toggleObsInput('parte_2')">✍️ Deixar observação</button>
-          </div>
-          <div class="obs-input-area" id="obs-input-parte_2">
-            <input type="text" id="obs-author-parte_2" class="obs-author-input" placeholder="Seu nome, cargo ou instituição (opcional, ex: Eng. Carlos)" />
-            <textarea class="obs-textarea" id="obs-text-parte_2" placeholder="Digite ou dite sua sugestão para este capítulo (suporta áudio contínuo de até 5 minutos com pausas)..."></textarea>
-            <div class="obs-actions-row">
-              <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-                <button class="btn-mic" id="btn-mic-parte_2" onclick="toggleAudioRecording('parte_2')">🎙️ Ditar áudio (até 5 min)</button>
-                <span id="timer-tag-parte_2" class="timer-badge" style="display: none;">🔴 Ditando: 00:00 / 05:00</span>
-              </div>
-              <button class="btn-primary" style="padding: 6px 18px; font-size: 0.85rem;" onclick="saveObservation('parte_2')">Salvar e enviar ao Fórum</button>
-            </div>
-            <div class="dictation-notice">ℹ️ Aceita ditado contínuo por voz de até 5 minutos. Pausas curtas são mantidas sem apagar o texto.</div>
-          </div>
-          <div class="obs-list" id="obs-list-parte_2"></div>
-        </div>
+
 
       </div>
     </section>
@@ -677,58 +654,7 @@
       </div>
     </section>
 
-    <!-- ===================================================================
-         PARTE 9.35 · FÓRUM PÚBLICO & CENTRAL DE OBSERVAÇÕES
-         =================================================================== -->
-    <section id="forum" class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag" style="background: rgba(16, 185, 129, 0.15); color: #10B981; border: 1px solid rgba(16, 185, 129, 0.3);">
-            💬 Fórum público & Fio de contribuições
-          </span>
-          <h2 class="section-title">Fórum central de observações e sugestões</h2>
-          <p class="section-subtitle">Centralizador de todas as contribuições, ideias, ditados de voz de até 5 minutos e comentários gravados em cada capítulo do projeto.</p>
-        </div>
 
-        <!-- Card de Envio para o Fórum Central -->
-        <div class="forum-post-card">
-          <h3 class="forum-post-title">✍️ Deixar contribuição ou ditado por voz</h3>
-          <p style="font-size: 0.88rem; color: var(--text-subtle); margin-bottom: 16px;">
-            Sua sugestão ou mensagem por voz será gravada e centralizada no fórum público do projeto. O ditado aceita até <strong>5 minutos contínuos</strong> com pausas automáticas.
-          </p>
-          <div class="forum-form-grid">
-            <input type="text" id="obs-author-forum_geral" class="obs-author-input" placeholder="Seu nome, cargo ou instituição (opcional, ex: Eng. Carlos)" />
-            <select id="obs-chapter-forum_geral" class="obs-chapter-select">
-              <option value="parte_2">Parte 2 · Diagnóstico e Histórico</option>
-              <option value="parte_3">Parte 3 · Por Que Agora</option>
-              <option value="parte_6">Parte 6 · Roteiro de Implantação</option>
-              <option value="forum_geral" selected>Fórum Geral / Visão Global</option>
-            </select>
-          </div>
-          <textarea id="obs-text-forum_geral" class="obs-textarea" style="height: 110px;" placeholder="Escreva sua sugestão aqui ou clique em 'Ditar áudio' para falar por até 5 minutos..."></textarea>
-          
-          <div class="obs-actions-row">
-            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-              <button class="btn-mic" id="btn-mic-forum_geral" onclick="toggleAudioRecording('forum_geral')">🎙️ Ditar áudio (até 5 min)</button>
-              <span id="timer-tag-forum_geral" class="timer-badge" style="display: none;">🔴 Ditando: 00:00 / 05:00</span>
-            </div>
-            <button class="btn-primary" style="padding: 8px 22px; font-size: 0.9rem;" onclick="saveObservation('forum_geral')">🚀 Publicar no Fórum</button>
-          </div>
-          <div class="dictation-notice">ℹ️ Aceita ditado por voz de até 5 minutos. Você pode fazer pausas enquanto fala sem perder o texto gravado.</div>
-        </div>
-
-        <!-- Filtros do Fórum -->
-        <div class="news-filter-tabs" style="margin-top: 35px; justify-content: flex-start;">
-          <button class="forum-tab-btn active" data-fcat="all" onclick="filterForumComments('all')">Todas as contribuições</button>
-          <button class="forum-tab-btn" data-fcat="parte_2" onclick="filterForumComments('parte_2')">Parte 2 (Diagnóstico)</button>
-          <button class="forum-tab-btn" data-fcat="parte_3" onclick="filterForumComments('parte_3')">Parte 3 (Por Que Agora)</button>
-          <button class="forum-tab-btn" data-fcat="parte_6" onclick="filterForumComments('parte_6')">Parte 6 (Roteiro)</button>
-        </div>
-
-        <!-- Feed de Comentários Centralizado -->
-        <div id="forum-comments-feed" class="forum-feed-grid"></div>
-      </div>
-    </section>
 
     <!-- ===================================================================
          PARTE 9.4 · VIDEOTECA & REPORTAGENS MULTIMÍDIA
