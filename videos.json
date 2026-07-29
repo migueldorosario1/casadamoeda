@@ -15,17 +15,17 @@
   },
   {
     "id": 2,
-    "title": "Solução Casa da Moeda do Brasil para o Real Digital (LIFT Challenge)",
+    "title": "Como é fabricado o dinheiro no Brasil (Visita à Casa da Moeda)",
     "category": "tecnico",
-    "badge": "📹 Apresentação Técnica CMB",
-    "duration": "6 min",
+    "badge": "📹 Bastidores CMB · Tecnologia",
+    "duration": "18 min",
     "date": "Julho / 2026",
-    "excerpt": "Apresentação oficial da infraestrutura CMB para o Real Digital com segurança, privacidade, validação offline e suporte a transações soberanas.",
+    "excerpt": "Documentário completo mostrando os bastidores da produção industrial, impressão de alta segurança e tecnologias de rastreamento e controle da Casa da Moeda do Brasil.",
     "thumbnail": "public/images/videos/thumb_selo_ia.png",
     "type": "youtube",
-    "url": "https://www.youtube.com/embed/j2ZVvcDWLBo?autoplay=1",
-    "originalUrl": "https://www.youtube.com/watch?v=j2ZVvcDWLBo",
-    "source": "Casa da Moeda do Brasil (YouTube)"
+    "url": "https://www.youtube.com/embed/6aolLKTHo-I?autoplay=1",
+    "originalUrl": "https://www.youtube.com/watch?v=6aolLKTHo-I",
+    "source": "Manual do Mundo / Casa da Moeda (YouTube)"
   },
   {
     "id": 3,

@@ -5,6 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  initMobileDropdowns();
   initReadingProgress();
   initFAQAccordion();
   loadPresentationStacks();
@@ -13,6 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
   loadVideoteca();
   loadNewsChannel();
 });
+
+function initMobileDropdowns() {
+  document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const parent = btn.closest(".nav-dropdown");
+      if (!parent) return;
+      
+      const isOpen = parent.classList.contains("active");
+      document.querySelectorAll(".nav-dropdown").forEach(d => {
+        if (d !== parent) d.classList.remove("active");
+      });
+      
+      parent.classList.toggle("active", !isOpen);
+    });
+  });
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".nav-dropdown").forEach(d => d.classList.remove("active"));
+  });
+}
 
 /* --------------------------------------------------------------------------
    0. Theme Switcher (Modo Dia / Noite)
