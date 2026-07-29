@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadPresentationStacks();
   loadSavedObservations();
   initFullscreenModal();
+  loadNewsChannel();
 });
 
 /* --------------------------------------------------------------------------
@@ -356,3 +357,72 @@ window.openFullscreenModal = function(folder, parteId, presIdx) {
     modal.classList.add("active");
   }
 };
+
+/* --------------------------------------------------------------------------
+   6. Canal de Notícias & Atualizações
+   -------------------------------------------------------------------------- */
+let allNewsData = [];
+
+async function loadNewsChannel() {
+  const container = document.getElementById("news-grid-container");
+  if (!container) return;
+
+  try {
+    const response = await fetch("noticias.json");
+    if (!response.ok) return;
+    allNewsData = await response.json();
+    renderNewsCards(allNewsData);
+  } catch (err) {
+    console.warn("Failed loading noticias.json:", err);
+  }
+}
+
+function renderNewsCards(items) {
+  const container = document.getElementById("news-grid-container");
+  if (!container) return;
+
+  if (!items || items.length === 0) {
+    container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: var(--text-subtle); padding: 40px;">Nenhuma notícia encontrada para esta categoria.</div>`;
+    return;
+  }
+
+  let html = "";
+  items.forEach(item => {
+    let badgeClass = "news-badge";
+    if (item.category === "eu") badgeClass += " badge-eu";
+    if (item.category === "global") badgeClass += " badge-global";
+
+    html += `
+      <article class="news-card">
+        <div>
+          <div class="news-card-header">
+            <span class="${badgeClass}">${item.badge}</span>
+            <span class="news-date">${item.date}</span>
+          </div>
+          <h3 class="news-card-title">${item.title}</h3>
+          <p class="news-card-body">${item.excerpt}</p>
+        </div>
+        <div class="news-card-footer">
+          <span style="font-weight: 500; color: var(--text-subtle);">${item.impact}</span>
+          <span class="news-link">Fonte: ${item.source} ↗</span>
+        </div>
+      </article>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
+window.filterNews = function(category) {
+  document.querySelectorAll(".news-tab-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.getAttribute("data-cat") === category);
+  });
+
+  if (category === "all") {
+    renderNewsCards(allNewsData);
+  } else {
+    const filtered = allNewsData.filter(item => item.category === category);
+    renderNewsCards(filtered);
+  }
+};
+

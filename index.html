@@ -58,6 +58,7 @@
           <li class="nav-dropdown">
             <button class="dropdown-toggle">Recursos ▾</button>
             <div class="dropdown-menu">
+              <a href="#noticias">Canal de Notícias</a>
               <a href="#faq">Perguntas Frequentes</a>
               <a href="#downloads">Downloads & Fontes</a>
             </div>
@@ -542,6 +543,30 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         PARTE 9.5 · CANAL DE NOTÍCIAS & ATUALIZAÇÕES
+         =================================================================== -->
+    <section id="noticias" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Canal de Notícias</span>
+          <h2 class="section-title">Últimas Notícias: Certificação & Soberania</h2>
+          <p class="section-subtitle">Destaques sobre o progresso regulatório, decisões legislativas e rastreabilidade logística no Brasil e no mundo.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="news-filter-tabs">
+          <button class="news-tab-btn active" data-cat="all" onclick="filterNews('all')">Todas as Notícias</button>
+          <button class="news-tab-btn" data-cat="brasil" onclick="filterNews('brasil')">🇧🇷 Brasil</button>
+          <button class="news-tab-btn" data-cat="eu" onclick="filterNews('eu')">🇪🇺 União Europeia</button>
+          <button class="news-tab-btn" data-cat="global" onclick="filterNews('global')">🌐 Global & Estatais</button>
+        </div>
+
+        <!-- News Grid Container -->
+        <div id="news-grid-container" class="news-grid"></div>
       </div>
     </section>
 

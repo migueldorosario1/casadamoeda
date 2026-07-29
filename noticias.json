@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "category": "brasil",
+    "badge": "🇧🇷 Brasil · Legislação",
+    "badgeClass": "badge-brasil",
+    "date": "Julho / 2026",
+    "title": "Congresso Aprova PL da Rastreabilidade Obrigatória do Ouro (PL 3.025/2023)",
+    "excerpt": "A Câmara dos Deputados aprovou o marco legal que estabelece a rastreabilidade do ouro em território nacional, definindo a Casa da Moeda do Brasil como a entidade pública responsável pela marcação e custódia digital.",
+    "impact": "Impacto: Casa da Moeda como Certificadora Oficial",
+    "source": "Câmara dos Deputados"
+  },
+  {
+    "id": 2,
+    "category": "eu",
+    "badge": "🇪🇺 União Europeia · Regulamento",
+    "badgeClass": "badge-eu",
+    "date": "Julho / 2026",
+    "title": "União Europeia Torna Obrigatório o Passaporte Digital de Produto (DPP)",
+    "excerpt": "Regulamento comunitário exige que mercadorias importadas pela UE possuam registro auditável de origem e cadeia de custódia digital, afetando diretamente as exportações brasileiras.",
+    "impact": "Exigência de Rastreabilidade para Exportação",
+    "source": "Comissão Europeia"
+  },
+  {
+    "id": 3,
+    "category": "global",
+    "badge": "🇰🇷 Coreia do Sul · Tecnologia",
+    "badgeClass": "badge-global",
+    "date": "Junho / 2026",
+    "title": "KOMSCO Consolida Migração para Serviços de Identidade Digital Soberana",
+    "excerpt": "A Casa da Moeda da Coreia do Sul atinge mais de 80% de receita proveniente de certificação digital, identidades de produtos e autenticação logística de alto desempenho.",
+    "impact": "Referência de Diversificação Digital",
+    "source": "KOMSCO Official Press"
+  },
+  {
+    "id": 4,
+    "category": "global",
+    "badge": "🇩🇪 Alemanha · Soberania",
+    "badgeClass": "badge-global",
+    "date": "Maio / 2026",
+    "title": "Bundesdruckerei Expande Operações da D-Trust no Bloco Europeu",
+    "excerpt": "A estatal alemã supera € 1,1 bilhão em receita operando como Autoridade Certificadora pública para infraestruturas críticas e rastreamento fiscal de cargas.",
+    "impact": "Faturamento Público em Certificação",
+    "source": "Bundesdruckerei Group"
+  },
+  {
+    "id": 5,
+    "category": "brasil",
+    "badge": "🇧🇷 Brasil · Fiscalização",
+    "badgeClass": "badge-brasil",
+    "date": "Julho / 2026",
+    "title": "Estudo Destaca Recuperação de R$ 1,65 Bilhão com Reativação de Contagem Inteligente",
+    "excerpt": "Relatório técnico aponta que a reintrodução do sistema de telemetria e lacres eletrônicos sob governança da Casa da Moeda é a medida mais célere para combate à sonegação fiscal.",
+    "impact": "Proteção do Fisco e Receita Pública",
+    "source": "Ministério da Fazenda"
+  },
+  {
+    "id": 6,
+    "category": "eu",
+    "badge": "🇫🇷 França · Custódia",
+    "badgeClass": "badge-eu",
+    "date": "Abril / 2026",
+    "title": "IN Groupe Assume Certificação de Rastreabilidade em Portos Europeus",
+    "excerpt": "A gráfica pública francesa firmou acordo internacional para operar como autoridade de custódia e selagem digital em rotas marítimas de contêineres.",
+    "impact": "Custódia Digital em Logística Marítima",
+    "source": "IN Groupe Press"
+  }
+]
