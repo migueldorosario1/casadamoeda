@@ -7,9 +7,10 @@
     "date": "Julho / 2026",
     "title": "Congresso avança na rastreabilidade obrigatória do ouro (PL 3.025/2023)",
     "excerpt": "A Câmara dos Deputados tramita o marco legal que estabelece a rastreabilidade fiscal e física do ouro no Brasil, definindo a Casa da Moeda do Brasil como autoridade pública para marcação e custódia digital.",
-    "impact": "Impacto: Casa da Moeda como Certificadora Oficial",
+    "impact": "Casa da Moeda como Certificadora Oficial",
     "source": "Câmara dos Deputados",
-    "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2367123"
+    "url": "https://www.camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2367123",
+    "image": "public/images/news/news_ouro.png"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "excerpt": "O Regulamento Europeu (UE 2024/1781) exige que mercadorias e commodities exportadas para a Europa possuam registro digital auditável de origem e sustentabilidade.",
     "impact": "Exigência de Rastreabilidade para Exportação",
     "source": "União Europeia (EUR-Lex)",
-    "url": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1781"
+    "url": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1781",
+    "image": "public/images/news/news_dpp_eu.png"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "excerpt": "A Casa da Moeda da Coreia do Sul atinge marco histórico com a expansão de serviços de certificação digital, identidades de produtos e logística soberana.",
     "impact": "Referência Internacional de Diversificação",
     "source": "KOMSCO (Portal Oficial)",
-    "url": "https://www.komsco.com/eng/main.do"
+    "url": "https://www.komsco.com/eng/main.do",
+    "image": "public/images/news/news_komsco.png"
   },
   {
     "id": 4,
@@ -45,22 +48,11 @@
     "excerpt": "A estatal alemã de impressão e segurança consolida sua atuação como Autoridade Certificadora pública para logística fiscal, selagem digital e infraestruturas do Estado.",
     "impact": "Modelo de Atuação Estatual Europeu",
     "source": "Bundesdruckerei Group",
-    "url": "https://www.bundesdruckerei.de/de"
+    "url": "https://www.bundesdruckerei.de/de",
+    "image": "public/images/news/news_bundesdruckerei.png"
   },
   {
     "id": 5,
-    "category": "brasil",
-    "badge": "🇧🇷 Brasil · Fiscalização",
-    "badgeClass": "badge-brasil",
-    "date": "Julho / 2026",
-    "title": "Casa da Moeda fortalece soluções de rastreabilidade e governança pública",
-    "excerpt": "Com tecnologia soberana de autenticação física e digital, a Casa da Moeda do Brasil atua na proteção do fisco, rastreamento de produtos regulados e combate à sonegação fiscal.",
-    "impact": "Soberania e Proteção da Receita",
-    "source": "Casa da Moeda do Brasil",
-    "url": "https://www.casadamoeda.gov.br/"
-  },
-  {
-    "id": 6,
     "category": "eu",
     "badge": "🇫🇷 França · Custódia",
     "badgeClass": "badge-eu",
@@ -69,6 +61,72 @@
     "excerpt": "A estatal francesa de moeda e soluções de identidade lidera projetos de custódia e selagem digital para contêineres e rotas de comércio internacional na Europa.",
     "impact": "Custódia Digital em Logística Marítima",
     "source": "IN Groupe França",
-    "url": "https://ingroupe.com"
+    "url": "https://ingroupe.com",
+    "image": "public/images/news/news_ingroupe.png"
+  },
+  {
+    "id": 6,
+    "category": "brasil",
+    "badge": "🇧🇷 Brasil · Economia",
+    "badgeClass": "badge-brasil",
+    "date": "Fevereiro / 2025",
+    "title": "Contrabando, falsificações e pirataria causam prejuízo de R$ 500 bilhões no Brasil",
+    "excerpt": "Levantamento do Fórum Nacional Contra a Pirataria aponta perdas recordes por sonegação e desvio de carga nas rodovias, reforçando a urgência da selagem e rastreamento digital.",
+    "impact": "Defesa do Fisco & Indústria Nacional",
+    "source": "G1 / Jornal Nacional",
+    "url": "https://g1.globo.com/jornal-nacional/noticia/2025/02/12/contrabando-falsificacoes-e-pirataria-produzem-prejuizo-de-r-500-bilhoes-para-a-economia-brasileira-em-2024.ghtml",
+    "image": "public/images/news/news_contrabando.png"
+  },
+  {
+    "id": 7,
+    "category": "brasil",
+    "badge": "🇧🇷 Brasil · Logística",
+    "badgeClass": "badge-brasil",
+    "date": "Julho / 2025",
+    "title": "Ferrovia para ligar o Atlântico ao Pacífico: veja o projeto do Brasil com a China",
+    "excerpt": "Acordo de cooperação entre Infra S.A. e o Instituto de Pesquisa China Railway estuda a viabilidade da rota rodoferroviária transcontinental integrada a Chancay.",
+    "impact": "Rotas de Integração & Competitividade",
+    "source": "G1 Economia",
+    "url": "https://g1.globo.com/economia/noticia/2025/07/08/ferrovia-para-ligar-o-atlantico-ao-pacifico-veja-o-que-se-sabe-ate-agora-do-projeto-do-brasil-com-a-china.ghtml",
+    "image": "public/images/news/news_ferrovia.png"
+  },
+  {
+    "id": 8,
+    "category": "eu",
+    "badge": "🇪🇺 União Europeia · Identidade Digital",
+    "badgeClass": "badge-eu",
+    "date": "Outubro / 2024",
+    "title": "Selo Eletrônico da ICP-Brasil adota diretrizes da legislação europeia eIDAS",
+    "excerpt": "Instituto Nacional de Tecnologia da Informação (ITI) regulamenta a nova modalidade de carimbo institucional desvinculada de CPF, garantindo interoperabilidade global.",
+    "impact": "Padronização Internacional de Confiança",
+    "source": "Portal Crypto ID",
+    "url": "https://cryptoid.com.br/criptografia-identificacao-digital-id-biometria/selo-eletronico-segundo-a-legislacao-europeia-eidas/",
+    "image": "public/images/news/news_selo_icp.png"
+  },
+  {
+    "id": 9,
+    "category": "global",
+    "badge": "🌐 Global · Comércio Exterior",
+    "badgeClass": "badge-global",
+    "date": "Outubro / 2021",
+    "title": "Viracopos e Porto de Santos aderem ao Passaporte Mundial de Logística (WLP)",
+    "excerpt": "Hubs logísticos brasileiros integram a rede internacional criada em Dubai para reduzir barreiras burocráticas e acelerar o trânsito com a Ásia e o Oriente Médio.",
+    "impact": "Eficiência de Cargas & Redução de Fretes",
+    "source": "Aeroporto de Viracopos & Santos Port",
+    "url": "https://www.viracopos.com/pt_br/noticias/viracopos-apresenta-nesta-quinta-feira-programa-mundial-wlp-que-vai-alavancar-o-mercado-exterior-do-brasil.htm",
+    "image": "public/images/news/news_viracopos.png"
+  },
+  {
+    "id": 10,
+    "category": "brasil",
+    "badge": "🇧🇷 Brasil · Segurança",
+    "badgeClass": "badge-brasil",
+    "date": "Setembro / 2023",
+    "title": "Dahua mostra Cerco Inteligente com inteligência artificial para monitoramento de cargas",
+    "excerpt": "Solução adotada por governos estaduais combina câmeras OCR, Big Data e IA para monitoramento veicular em tempo real e combate ao roubo de carga.",
+    "impact": "Monitoramento em Tempo Real & Rastreio",
+    "source": "Revista AIoT Brasil",
+    "url": "https://aiotbrasil.com.br/noticias/dahua-mostra-cerco-inteligente-no-evento-isc-brasil",
+    "image": "public/images/news/news_cerco.png"
   }
 ]
