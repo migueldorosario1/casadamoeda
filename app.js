@@ -392,6 +392,7 @@ function renderNewsCards(items) {
     if (item.category === "eu") badgeClass += " badge-eu";
     if (item.category === "global") badgeClass += " badge-global";
 
+    const linkUrl = item.url || "#";
     html += `
       <article class="news-card">
         <div>
@@ -399,12 +400,18 @@ function renderNewsCards(items) {
             <span class="${badgeClass}">${item.badge}</span>
             <span class="news-date">${item.date}</span>
           </div>
-          <h3 class="news-card-title">${item.title}</h3>
+          <h3 class="news-card-title">
+            <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;" onmouseover="this.style.color='var(--primary-emerald)'" onmouseout="this.style.color='inherit'">
+              ${item.title}
+            </a>
+          </h3>
           <p class="news-card-body">${item.excerpt}</p>
         </div>
         <div class="news-card-footer">
           <span style="font-weight: 500; color: var(--text-subtle);">${item.impact}</span>
-          <span class="news-link">Fonte: ${item.source} ↗</span>
+          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="news-link">
+            Ler na ${item.source} ↗
+          </a>
         </div>
       </article>
     `;

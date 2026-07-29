@@ -8,7 +8,8 @@
     "title": "Congresso Aprova PL da Rastreabilidade Obrigatória do Ouro (PL 3.025/2023)",
     "excerpt": "A Câmara dos Deputados aprovou o marco legal que estabelece a rastreabilidade do ouro em território nacional, definindo a Casa da Moeda do Brasil como a entidade pública responsável pela marcação e custódia digital.",
     "impact": "Impacto: Casa da Moeda como Certificadora Oficial",
-    "source": "Câmara dos Deputados"
+    "source": "Câmara dos Deputados",
+    "url": "https://www.camara.leg.br/propostas-legislativas/2367123"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "title": "União Europeia Torna Obrigatório o Passaporte Digital de Produto (DPP)",
     "excerpt": "Regulamento comunitário exige que mercadorias importadas pela UE possuam registro auditável de origem e cadeia de custódia digital, afetando diretamente as exportações brasileiras.",
     "impact": "Exigência de Rastreabilidade para Exportação",
-    "source": "Comissão Europeia"
+    "source": "Comissão Europeia",
+    "url": "https://commission.europa.eu/energy-climate-change-environment/standards-tools-and-labels/products-digital-passport_en"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "title": "KOMSCO Consolida Migração para Serviços de Identidade Digital Soberana",
     "excerpt": "A Casa da Moeda da Coreia do Sul atinge mais de 80% de receita proveniente de certificação digital, identidades de produtos e autenticação logística de alto desempenho.",
     "impact": "Referência de Diversificação Digital",
-    "source": "KOMSCO Official Press"
+    "source": "KOMSCO Official Press",
+    "url": "https://www.komsco.com/eng/contents/page_520.do"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "title": "Bundesdruckerei Expande Operações da D-Trust no Bloco Europeu",
     "excerpt": "A estatal alemã supera € 1,1 bilhão em receita operando como Autoridade Certificadora pública para infraestruturas críticas e rastreamento fiscal de cargas.",
     "impact": "Faturamento Público em Certificação",
-    "source": "Bundesdruckerei Group"
+    "source": "Bundesdruckerei Group",
+    "url": "https://www.bundesdruckerei.de/de/Unternehmen/D-TRUST"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "title": "Estudo Destaca Recuperação de R$ 1,65 Bilhão com Reativação de Contagem Inteligente",
     "excerpt": "Relatório técnico aponta que a reintrodução do sistema de telemetria e lacres eletrônicos sob governança da Casa da Moeda é a medida mais célere para combate à sonegação fiscal.",
     "impact": "Proteção do Fisco e Receita Pública",
-    "source": "Ministério da Fazenda"
+    "source": "Ministério da Fazenda",
+    "url": "https://www.gov.br/fazenda/pt-br"
   },
   {
     "id": 6,
@@ -63,6 +68,7 @@
     "title": "IN Groupe Assume Certificação de Rastreabilidade em Portos Europeus",
     "excerpt": "A gráfica pública francesa firmou acordo internacional para operar como autoridade de custódia e selagem digital em rotas marítimas de contêineres.",
     "impact": "Custódia Digital em Logística Marítima",
-    "source": "IN Groupe Press"
+    "source": "IN Groupe Press",
+    "url": "https://ingroupe.com/en/"
   }
 ]
