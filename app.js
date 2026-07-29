@@ -92,10 +92,10 @@ async function loadPresentationStacks() {
       let html = `
         <div class="stack-header">
           <h3 class="stack-title">
-            <span>📑 Apresentações em Slides</span>
+            <span>📑 Apresentação Oficial em Slides</span>
           </h3>
-          <span style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-mono);">
-            ${presentations.length} Decks Disponíveis
+          <span style="font-size: 0.85rem; color: var(--accent-gold); font-weight: 600; font-family: var(--font-mono);">
+            44 Slides (Versão Completa)
           </span>
         </div>
         <div class="stack-cards-vertical">

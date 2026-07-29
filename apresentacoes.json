@@ -1,7 +1,7 @@
 {
   "parte_2": [
     {
-      "versionTag": "Versão Oficial (v7.0)",
+      "versionTag": "Versão Oficial (44 Slides)",
       "name": "O Futuro do Brasil: Controle Logístico Nacional (v7)",
       "date": "2026-07-20",
       "isOfficial": true,
@@ -9,30 +9,6 @@
       "slidesCount": 44,
       "pdfLink": "public/downloads/O_Futuro_do_Brasil_Controle_Logistico_Nacional v7.pptx.pdf",
       "pptxLink": "public/downloads/O_Futuro_do_Brasil_Controle_Logistico_Nacional v7.pptx.pdf"
-    }
-  ],
-  "parte_4": [
-    {
-      "versionTag": "Versão Oficial (v3.0)",
-      "name": "Casa da Moeda: Tese Final e Evidência Internacional",
-      "date": "2026-07-18",
-      "isOfficial": true,
-      "slidesFolder": "public/slides/parte_4/r3",
-      "slidesCount": 20,
-      "pdfLink": "",
-      "pptxLink": "public/downloads/CMB_tese_final.pptx"
-    }
-  ],
-  "parte_6": [
-    {
-      "versionTag": "Versão Oficial (v4.0)",
-      "name": "Sistema Nacional de Controle Logístico v4.0: Arquitetura e Solução",
-      "date": "2026-07-22",
-      "isOfficial": true,
-      "slidesFolder": "public/slides/parte_6/r3",
-      "slidesCount": 45,
-      "pdfLink": "",
-      "pptxLink": "public/downloads/CLEC-CMB_v4.0_Controle_Logistico_Nacional.pptx"
     }
   ]
 }
