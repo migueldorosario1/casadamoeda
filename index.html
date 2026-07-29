@@ -34,33 +34,33 @@
       <nav>
         <ul class="nav-links">
           <li class="nav-dropdown">
-            <button class="dropdown-toggle">O Projeto ▾</button>
+            <button class="dropdown-toggle">O projeto ▾</button>
             <div class="dropdown-menu">
-              <a href="#diagnostico">Diagnóstico & Histórico</a>
-              <a href="#por-que-agora">Por Que Agora</a>
-              <a href="#roteiro">Roteiro de Implantação</a>
+              <a href="#diagnostico">Diagnóstico e histórico</a>
+              <a href="#por-que-agora">Por que agora</a>
+              <a href="#roteiro">Roteiro de implantação</a>
             </div>
           </li>
           <li class="nav-dropdown">
-            <button class="dropdown-toggle">Evidência & Soberania ▾</button>
+            <button class="dropdown-toggle">Evidência e soberania ▾</button>
             <div class="dropdown-menu">
-              <a href="#evidencia">Casos Internacionais</a>
-              <a href="#soberania">Soberania Nacional</a>
+              <a href="#evidencia">Casos internacionais</a>
+              <a href="#soberania">Soberania nacional</a>
             </div>
           </li>
           <li class="nav-dropdown">
-            <button class="dropdown-toggle">Solução & Economia ▾</button>
+            <button class="dropdown-toggle">Solução e economia ▾</button>
             <div class="dropdown-menu">
-              <a href="#solucao">Sistema de Certificação</a>
-              <a href="#economia">Modelo Econômico</a>
+              <a href="#solucao">Sistema de certificação</a>
+              <a href="#economia">Modelo econômico</a>
             </div>
           </li>
           <li class="nav-dropdown">
             <button class="dropdown-toggle">Recursos ▾</button>
             <div class="dropdown-menu">
-              <a href="#noticias">Canal de Notícias</a>
-              <a href="#faq">Perguntas Frequentes</a>
-              <a href="#downloads">Downloads & Fontes</a>
+              <a href="#noticias">Canal de notícias</a>
+              <a href="#faq">Perguntas frequentes</a>
+              <a href="#downloads">Downloads e fontes</a>
             </div>
           </li>
         </ul>
@@ -88,7 +88,7 @@
           <span class="chip">Sistema Público de Certificação</span>
         </div>
         
-        <h1 class="hero-title">O Brasil precisa de um Sistema Nacional de Controle Logístico para modernizar a sua economia</h1>
+        <h1 class="hero-title">O Brasil precisa de um sistema nacional de controle logístico para modernizar a sua economia</h1>
         <p class="hero-subtitle">A Casa da Moeda do Brasil como Âncora Pública de Confiança para a Certificação e Rastreabilidade</p>
         
         <div class="synthesis-card">
@@ -100,11 +100,132 @@
         
         <div class="hero-actions">
           <a href="https://drive.google.com/file/d/1EeXMrtevxc-XDyd5yL2-Rr6NEjkyGd6z/view" target="_blank" rel="noopener" class="btn-primary">
-            📄 Baixar Artigo Científico (PDF)
+            📄 Baixar artigo científico (PDF)
           </a>
           <a href="#solucao" class="btn-secondary">
-            📊 Ver Sistema de Certificação ↓
+            📊 Ver Sistema de certificação ↓
           </a>
+        </div>
+
+        <!-- ===================================================================
+             MAPA LOGÍSTICO INTERATIVO DE CIRCULAÇÃO DE PRODUTOS
+             =================================================================== -->
+        <div class="logistics-map-card">
+          <div class="map-header">
+            <div class="map-tag">🌐 Experiência Interativa · Mapa da Rastreabilidade</div>
+            <h2 class="map-title">Mapa do processo logístico de circulação</h2>
+            <p class="map-subtitle">Passe o mouse (ou toque) sobre cada etapa do fluxo para expandir o processo de certificação da Casa da Moeda e acesse o capítulo correspondente.</p>
+          </div>
+
+          <div class="map-pipeline">
+            <!-- Stage 1 -->
+            <div class="map-node" data-stage="1" onclick="document.querySelector('#diagnostico').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">🏭</div>
+              <div class="node-step">Etapa 01</div>
+              <div class="node-name">Produção e origem</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge">🏭 Origem / Envasadora</div>
+                <h4 class="pop-title">Serialização e origem físico-digital</h4>
+                <p class="pop-desc">Na fábrica ou mina, a mercadoria recebe código único e serialização em tempo real via telemetria industrial.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver Diagnóstico e histórico ➔</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-connector"><div class="connector-line"></div></div>
+
+            <!-- Stage 2 -->
+            <div class="map-node" data-stage="2" onclick="document.querySelector('#solucao').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">🔐</div>
+              <div class="node-step">Etapa 02</div>
+              <div class="node-name">Selagem digital</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge pop-emerald">🔐 Casa da Moeda</div>
+                <h4 class="pop-title">Lacres eletrônicos e chancela pública</h4>
+                <p class="pop-desc">Vinculação do lacre eletrônico físico à identidade digital soberana chancelada pela Casa da Moeda do Brasil.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver Sistema de certificação ➔</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-connector"><div class="connector-line"></div></div>
+
+            <!-- Stage 3 -->
+            <div class="map-node" data-stage="3" onclick="document.querySelector('#soberania').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">🚛</div>
+              <div class="node-step">Etapa 03</div>
+              <div class="node-name">Transporte e frota</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge">🚛 Trânsito Logístico</div>
+                <h4 class="pop-title">Telemetria e rastreamento de frota</h4>
+                <p class="pop-desc">Sensores de integridade e geolocalização monitoram o percurso da carga contra violações ou desvios.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver soberania e segurança ➔</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-connector"><div class="connector-line"></div></div>
+
+            <!-- Stage 4 -->
+            <div class="map-node" data-stage="4" onclick="document.querySelector('#por-que-agora').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">⚓</div>
+              <div class="node-step">Etapa 04</div>
+              <div class="node-name">Posto fiscal / porto</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge pop-gold">⚓ Alfândega / Fisco</div>
+                <h4 class="pop-title">Leitura RFID / OCR em pórticos</h4>
+                <p class="pop-desc">Fiscalização inteligente sem paradas. Pórticos automatizados leem o lacre em milissegundos cruzando com a Receita.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver exigências e regulamentos ➔</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-connector"><div class="connector-line"></div></div>
+
+            <!-- Stage 5 -->
+            <div class="map-node" data-stage="5" onclick="document.querySelector('#economia').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">🏬</div>
+              <div class="node-step">Etapa 05</div>
+              <div class="node-name">Centro logístico</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge">🏬 CD & Distribuição</div>
+                <h4 class="pop-title">Conferência e baixa auditável</h4>
+                <p class="pop-desc">O centro de distribuição faz a baixa do lacre e confirma a integridade total do lote entregue.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver Modelo econômico ➔</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-connector"><div class="connector-line"></div></div>
+
+            <!-- Stage 6 -->
+            <div class="map-node" data-stage="6" onclick="document.querySelector('#noticias').scrollIntoView({behavior: 'smooth'})">
+              <div class="node-icon-box">🛒</div>
+              <div class="node-step">Etapa 06</div>
+              <div class="node-name">Venda e consumidor</div>
+              
+              <div class="map-popover">
+                <div class="pop-badge pop-emerald">🛒 Consumidor / DPP</div>
+                <h4 class="pop-title">Passaporte Digital de Produto (DPP)</h4>
+                <p class="pop-desc">O consumidor ou fiscal consulta a origem, autenticidade e certificado de sustentabilidade do produto via QR Code.</p>
+                <div class="pop-footer">
+                  <span class="pop-action">Ver notícias do passaporte digital ➔</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="map-hint">💡 <em>Passe o mouse nos pontos acima para ver os detalhes ou clique em qualquer etapa para navegar diretamente ao capítulo.</em></div>
         </div>
       </div>
     </section>
@@ -116,7 +237,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 2 · Diagnóstico</span>
-          <h2 class="section-title">O Histórico do Controle Logístico no Brasil</h2>
+          <h2 class="section-title">O histórico do controle logístico no Brasil</h2>
           <p class="section-subtitle">O histórico de como o Brasil operou sistemas pioneiros de telemetria e rastreabilidade e como a descontinuação desses serviços impactou a economia pública.</p>
         </div>
 
@@ -207,14 +328,14 @@
         <!-- Espaço de Observação Amigável (Parte 2) -->
         <div class="observation-box" id="obs-box-parte_2" data-parte="parte_2">
           <div class="obs-header">
-            <div class="obs-title">💬 Observações & Sugestões do Capítulo</div>
-            <button class="btn-add-obs" onclick="toggleObsInput('parte_2')">✍️ Deixar Observação</button>
+            <div class="obs-title">💬 Observações e sugestões do capítulo</div>
+            <button class="btn-add-obs" onclick="toggleObsInput('parte_2')">✍️ Deixar observação</button>
           </div>
           <div class="obs-input-area" id="obs-input-parte_2">
             <textarea class="obs-textarea" id="obs-text-parte_2" placeholder="Digita aqui a sua sugestão ou observação para este capítulo..."></textarea>
             <div class="obs-actions-row">
-              <button class="btn-mic" id="btn-mic-parte_2" onclick="toggleAudioRecording('parte_2')">🎙️ Ditar Áudio</button>
-              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_2')">Salvar Observação</button>
+              <button class="btn-mic" id="btn-mic-parte_2" onclick="toggleAudioRecording('parte_2')">🎙️ Ditar áudio</button>
+              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_2')">Salvar observação</button>
             </div>
           </div>
           <div class="obs-list" id="obs-list-parte_2"></div>
@@ -230,7 +351,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 3 · Oportunidade</span>
-          <h2 class="section-title">Por Que Agora: A Janela de Oportunidade</h2>
+          <h2 class="section-title">Por que agora: A Janela de Oportunidade</h2>
           <p class="section-subtitle">Exigências internacionais da União Europeia e o novo marco legal do ouro aprovado no Congresso exigem uma resposta pública estruturada.</p>
         </div>
 
@@ -246,22 +367,22 @@
             <tbody>
               <tr>
                 <td><strong>19/07/2026</strong></td>
-                <td>Passaporte Digital de Produto (União Europeia)</td>
+                <td>Passaporte digital de produto (União Europeia)</td>
                 <td>Regulamento europeu exige rastreabilidade da cadeia de custódia para produtos exportados.</td>
               </tr>
               <tr>
                 <td><strong>Dez/2026</strong></td>
-                <td>Identidade Digital Europeia (eIDAS 2)</td>
+                <td>Identidade digital europeia (eIDAS 2)</td>
                 <td>27 países passam a emitir carteiras digitais oficiais para empresas e produtos.</td>
               </tr>
               <tr>
                 <td><strong>18/02/2027</strong></td>
-                <td>Passaporte Obrigatório de Baterias</td>
+                <td>Passaporte obrigatório de baterias</td>
                 <td>Exigência de rastreabilidade digital para componentes automotivos e industriais.</td>
               </tr>
               <tr>
                 <td><strong>2027–2030</strong></td>
-                <td>Rastreabilidade para Têxteis, Alumínio e Commodities</td>
+                <td>Rastreabilidade para têxteis, alumínio e commodities</td>
                 <td>Expansão dos requisitos de certificação para a pauta exportadora brasileira.</td>
               </tr>
             </tbody>
@@ -269,9 +390,9 @@
         </div>
 
         <div class="synthesis-card" style="border-left-color: var(--accent-gold); margin-top: 30px;">
-          <span class="badge-official" style="margin-bottom: 12px; display: inline-block;">MARCO LEGAL APROVADO</span>
+          <span class="badge-official" style="margin-bottom: 12px; display: inline-block;">Marco legal aprovado</span>
           <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--text-title); margin-bottom: 10px;">
-            Aprovação do Projeto de Lei da Rastreabilidade do Ouro (PL 3.025/2023)
+            Aprovação do projeto de lei da rastreabilidade do ouro (PL 3.025/2023)
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7;">
             A Câmara dos Deputados aprovou o projeto de lei que estabelece a rastreabilidade obrigatória do ouro no Brasil, definindo a <strong>Casa da Moeda como a entidade certificadora pública responsável pela marcação e custódia digital</strong>.
@@ -281,14 +402,14 @@
         <!-- Espaço de Observação Amigável (Parte 3) -->
         <div class="observation-box" id="obs-box-parte_3" data-parte="parte_3">
           <div class="obs-header">
-            <div class="obs-title">💬 Observações & Sugestões do Capítulo</div>
-            <button class="btn-add-obs" onclick="toggleObsInput('parte_3')">✍️ Deixar Observação</button>
+            <div class="obs-title">💬 Observações e sugestões do capítulo</div>
+            <button class="btn-add-obs" onclick="toggleObsInput('parte_3')">✍️ Deixar observação</button>
           </div>
           <div class="obs-input-area" id="obs-input-parte_3">
             <textarea class="obs-textarea" id="obs-text-parte_3" placeholder="Digita aqui a sua sugestão ou observação para este capítulo..."></textarea>
             <div class="obs-actions-row">
-              <button class="btn-mic" id="btn-mic-parte_3" onclick="toggleAudioRecording('parte_3')">🎙️ Ditar Áudio</button>
-              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_3')">Salvar Observação</button>
+              <button class="btn-mic" id="btn-mic-parte_3" onclick="toggleAudioRecording('parte_3')">🎙️ Ditar áudio</button>
+              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_3')">Salvar observação</button>
             </div>
           </div>
           <div class="obs-list" id="obs-list-parte_3"></div>
@@ -304,7 +425,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 4 · Evidência</span>
-          <h2 class="section-title">Casos Internacionais: Estatais de Moeda pelo Mundo</h2>
+          <h2 class="section-title">Casos internacionais: Estatais de Moeda pelo Mundo</h2>
           <p class="section-subtitle">Casos reais de estatais que migraram da impressão de cédulas para serviços de certificação digital e controle logístico.</p>
         </div>
 
@@ -312,7 +433,7 @@
         <div class="cards-grid-2" style="margin-bottom: 40px;">
           <div class="benchmark-card">
             <div class="benchmark-flag">🇰🇷 KOMSCO (Coreia do Sul)</div>
-            <div class="benchmark-title">Identidade Digital & Autenticação</div>
+            <div class="benchmark-title">Identidade digital e autenticação</div>
             <div class="benchmark-body">
               Migrou da impressão de moeda física para a emissão de identidade digital soberana. Mais de 80% do seu faturamento atual vem de serviços digitais.
             </div>
@@ -320,7 +441,7 @@
 
           <div class="benchmark-card">
             <div class="benchmark-flag">🇩🇪 Bundesdruckerei (Alemanha)</div>
-            <div class="benchmark-title">Soberania Digital & D-Trust</div>
+            <div class="benchmark-title">Soberania digital e D-Trust</div>
             <div class="benchmark-body">
               Transformou-se no grupo público de soberania digital da Alemanha, operando como Autoridade Certificadora pública com faturamento superior a € 1 bilhão.
             </div>
@@ -328,7 +449,7 @@
 
           <div class="benchmark-card">
             <div class="benchmark-flag">🇫🇷 IN Groupe (França)</div>
-            <div class="benchmark-title">Serviços de Certificação e Custódia</div>
+            <div class="benchmark-title">Serviços de certificação e custódia</div>
             <div class="benchmark-body">
               Reinventou sua atuação em serviços de certificação logística e autenticação, tornando-se referência na Europa.
             </div>
@@ -336,7 +457,7 @@
 
           <div class="benchmark-card">
             <div class="benchmark-flag">🇵🇭 APO Production Unit (Filipinas)</div>
-            <div class="benchmark-title">Sistemas Fiscais Ponta a Ponta</div>
+            <div class="benchmark-title">Sistemas fiscais ponta a ponta</div>
             <div class="benchmark-body">
               Gráfica pública que opera o sistema de controle e rastreamento fiscal, sendo autossustentável e transferindo dividendos ao Tesouro.
             </div>
@@ -355,7 +476,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 5 · Soberania</span>
-          <h2 class="section-title">Soberania Nacional & Segurança da Informação</h2>
+          <h2 class="section-title">Soberania nacional & Segurança da Informação</h2>
           <p class="section-subtitle">Garantir a governança pública sobre as chaves e os registros de trânsito de mercadorias no território nacional.</p>
         </div>
 
@@ -374,31 +495,31 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 6 · Solução</span>
-          <h2 class="section-title">A Solução: Sistema de Certificação Logística</h2>
+          <h2 class="section-title">A Solução: Sistema de certificação Logística</h2>
           <p class="section-subtitle">Arquitetura integrada em três níveis de segurança, combinando fornecedores privados de lacres com a governança da Casa da Moeda.</p>
         </div>
 
         <!-- As 3 Camadas -->
         <div class="cards-grid-3" style="margin-bottom: 40px;">
           <div class="benchmark-card" style="border-top: 4px solid var(--text-subtle);">
-            <div class="benchmark-subtitle">Nível 1 · Dispositivo Físico</div>
-            <div class="benchmark-title">Lacres Eletrônicos Certificados</div>
+            <div class="benchmark-subtitle">Nível 1 · Dispositivo físico</div>
+            <div class="benchmark-title">Lacres eletrônicos certificados</div>
             <div class="benchmark-body">
               Dispositivos com proteção física e leitores de radiofrequência. <strong>Fabricados por múltiplos fornecedores privados credenciados.</strong>
             </div>
           </div>
 
           <div class="benchmark-card" style="border-top: 4px solid var(--primary-emerald);">
-            <div class="benchmark-subtitle" style="color: var(--primary-emerald);">Nível 2 · Registro Soberano</div>
-            <div class="benchmark-title">Identidade Digital da Casa da Moeda</div>
+            <div class="benchmark-subtitle" style="color: var(--primary-emerald);">Nível 2 · Registro soberano</div>
+            <div class="benchmark-title">Identidade digital da Casa da Moeda</div>
             <div class="benchmark-body">
               O registro público oficial administrado pela <strong>Casa da Moeda do Brasil</strong>, vinculando lacre, transporte e eventos em trilha auditável.
             </div>
           </div>
 
           <div class="benchmark-card" style="border-top: 4px solid var(--accent-gold);">
-            <div class="benchmark-subtitle" style="color: var(--accent-gold);">Nível 3 · Assinatura Oficial</div>
-            <div class="benchmark-title">Assinatura Digital do Governo</div>
+            <div class="benchmark-subtitle" style="color: var(--accent-gold);">Nível 3 · Assinatura oficial</div>
+            <div class="benchmark-title">Assinatura digital do governo</div>
             <div class="benchmark-body">
               Infraestrutura de assinatura digital que garante a validade jurídica dos eventos de transporte e conferência.
             </div>
@@ -408,7 +529,7 @@
         <!-- Consultoria da Ceitec -->
         <div class="synthesis-card" style="margin-bottom: 40px;">
           <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--primary-emerald); margin-bottom: 8px;">
-            💡 Papel Estratégico da Ceitec: Consultoria e Estudos Tecnológicos
+            💡 Papel estratégico da Ceitec: consultoria e estudos tecnológicos
           </h3>
           <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
             A Ceitec participa do projeto como <strong>parceira de consultoria e inteligência tecnológica</strong>. A empresa atuará na prospecção global dos melhores chips e componentes, auxiliando a Casa da Moeda na avaliação técnica dos dispositivos e no fomento gradual de parcerias de estudo no Brasil.
@@ -420,14 +541,14 @@
         <!-- Espaço de Observação Amigável (Parte 6) -->
         <div class="observation-box" id="obs-box-parte_6" data-parte="parte_6">
           <div class="obs-header">
-            <div class="obs-title">💬 Observações & Sugestões do Capítulo</div>
-            <button class="btn-add-obs" onclick="toggleObsInput('parte_6')">✍️ Deixar Observação</button>
+            <div class="obs-title">💬 Observações e sugestões do capítulo</div>
+            <button class="btn-add-obs" onclick="toggleObsInput('parte_6')">✍️ Deixar observação</button>
           </div>
           <div class="obs-input-area" id="obs-input-parte_6">
             <textarea class="obs-textarea" id="obs-text-parte_6" placeholder="Digita aqui a sua sugestão ou observação para este capítulo..."></textarea>
             <div class="obs-actions-row">
-              <button class="btn-mic" id="btn-mic-parte_6" onclick="toggleAudioRecording('parte_6')">🎙️ Ditar Áudio</button>
-              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_6')">Salvar Observação</button>
+              <button class="btn-mic" id="btn-mic-parte_6" onclick="toggleAudioRecording('parte_6')">🎙️ Ditar áudio</button>
+              <button class="btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="saveObservation('parte_6')">Salvar observação</button>
             </div>
           </div>
           <div class="obs-list" id="obs-list-parte_6"></div>
@@ -443,13 +564,13 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 7 · Economia</span>
-          <h2 class="section-title">Modelo Econômico Sustentável</h2>
+          <h2 class="section-title">Modelo econômico Sustentável</h2>
           <p class="section-subtitle">Fontes de receita atreladas à prestação de serviços de certificação e à chancela oficial da Casa da Moeda.</p>
         </div>
 
         <div class="cards-grid-2">
           <div class="stat-card">
-            <h4 style="color: var(--primary-emerald); font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 12px;">Fontes de Receita Previstas</h4>
+            <h4 style="color: var(--primary-emerald); font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 12px;">Fontes de receita previstas</h4>
             <ul style="list-style: none; color: var(--text-muted); font-size: 0.92rem; display: flex; flex-direction: column; gap: 8px;">
               <li>✔ <strong>Licença da Marca de Conformidade:</strong> Cobrança por unidade certificada.</li>
               <li>✔ <strong>Taxas da Rastreabilidade do Ouro (PL 3.025):</strong> Custeio previsto em legislação.</li>
@@ -459,7 +580,7 @@
           </div>
 
           <div class="stat-card">
-            <h4 style="color: var(--accent-gold); font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 12px;">Transparência e Integridade</h4>
+            <h4 style="color: var(--accent-gold); font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 12px;">Transparência e integridade</h4>
             <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
               O projeto se apoia em dados consolidados e histórico real de faturamento da Casa da Moeda do Brasil, sem depender de projeções irreais de mercado.
             </p>
@@ -475,26 +596,26 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 8 · Roteiro</span>
-          <h2 class="section-title">Roteiro de Implantação (2026–2030)</h2>
+          <h2 class="section-title">Roteiro de implantação (2026–2030)</h2>
           <p class="section-subtitle">Etapas de implementação progressiva condicionadas ao sucesso de projetos-piloto.</p>
         </div>
 
         <div class="cards-grid-3">
           <div class="stat-card">
             <div class="stat-tag" style="color: var(--primary-emerald); font-weight: 700;">Etapa 1 · 2026–2027</div>
-            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Projeto-Piloto do Ouro</h4>
+            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Projeto-piloto do ouro</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted);">Implementação inicial na rastreabilidade do ouro em cumprimento ao PL 3.025/2023.</p>
           </div>
 
           <div class="stat-card">
             <div class="stat-tag" style="color: var(--primary-emerald); font-weight: 700;">Etapa 2 · 2027</div>
-            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Especificação Aberta</h4>
+            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Especificação aberta</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted);">Definição dos requisitos técnicos para o credenciamento de múltiplos fabricantes.</p>
           </div>
 
           <div class="stat-card">
             <div class="stat-tag" style="color: var(--primary-emerald); font-weight: 700;">Etapa 3 · 2027–2028</div>
-            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Testes Laboratoriais</h4>
+            <h4 style="font-family: var(--font-serif); margin: 8px 0;">Testes laboratoriais</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted);">Ensaio e homologação de equipamentos em laboratórios técnicos de acreditação.</p>
           </div>
         </div>
@@ -508,7 +629,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 9 · FAQ</span>
-          <h2 class="section-title">Perguntas Frequentes</h2>
+          <h2 class="section-title">Perguntas frequentes</h2>
           <p class="section-subtitle">Respostas diretas às principais dúvidas sobre o controle logístico nacional.</p>
         </div>
 
@@ -552,17 +673,17 @@
     <section id="noticias" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Canal de Notícias</span>
-          <h2 class="section-title">Últimas Notícias: Certificação & Soberania</h2>
+          <span class="section-tag">Canal de notícias</span>
+          <h2 class="section-title">Últimas notícias: certificação e soberania</h2>
           <p class="section-subtitle">Destaques sobre o progresso regulatório, decisões legislativas e rastreabilidade logística no Brasil e no mundo.</p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="news-filter-tabs">
-          <button class="news-tab-btn active" data-cat="all" onclick="filterNews('all')">Todas as Notícias</button>
+          <button class="news-tab-btn active" data-cat="all" onclick="filterNews('all')">Todas as notícias</button>
           <button class="news-tab-btn" data-cat="brasil" onclick="filterNews('brasil')">🇧🇷 Brasil</button>
           <button class="news-tab-btn" data-cat="eu" onclick="filterNews('eu')">🇪🇺 União Europeia</button>
-          <button class="news-tab-btn" data-cat="global" onclick="filterNews('global')">🌐 Global & Estatais</button>
+          <button class="news-tab-btn" data-cat="global" onclick="filterNews('global')">🌐 Global e estatais</button>
         </div>
 
         <!-- News Grid Container -->
@@ -577,13 +698,13 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Parte 10 · Repositório</span>
-          <h2 class="section-title">Downloads & Documentos Públicos</h2>
+          <h2 class="section-title">Downloads e documentos públicos</h2>
           <p class="section-subtitle">Acesso livre aos arquivos do projeto e apresentações em formato aberto.</p>
         </div>
 
         <div class="cards-grid-2">
           <div class="benchmark-card" style="border-color: var(--primary-emerald);">
-            <div class="benchmark-title">Artigo Científico Completo (PDF)</div>
+            <div class="benchmark-title">Artigo científico completo (PDF)</div>
             <div class="benchmark-subtitle">"Controle Logístico Nacional" · 30 Páginas</div>
             <div class="benchmark-body">
               Documento completo detalhando o histórico, a análise internacional e a proposta para o Brasil.
@@ -594,7 +715,7 @@
           </div>
 
           <div class="benchmark-card">
-            <div class="benchmark-title">Apresentações em Slides</div>
+            <div class="benchmark-title">Apresentações em slides</div>
             <div class="benchmark-subtitle">Decks para Download (PDF / PPTX)</div>
             <div class="benchmark-body">
               <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">

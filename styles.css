@@ -1365,3 +1365,251 @@ body {
   transform: translateX(2px);
 }
 
+/* --------------------------------------------------------------------------
+   INTERACTIVE LOGISTICS MAP (MAPA DE CUSTÓDIA & CIRCULAÇÃO)
+   -------------------------------------------------------------------------- */
+.logistics-map-card {
+  margin-top: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: visible;
+}
+
+.map-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.map-tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.map-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  color: var(--text-title);
+  margin-bottom: 8px;
+}
+
+.map-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.map-pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 40px 10px 20px 10px;
+  flex-wrap: wrap;
+  gap: 15px 0;
+}
+
+.map-node {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  flex: 1;
+  min-width: 110px;
+  transition: transform 0.25s ease;
+}
+
+.map-node:hover {
+  transform: translateY(-4px);
+}
+
+.node-icon-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.map-node:hover .node-icon-box {
+  border-color: var(--primary-emerald);
+  background: rgba(16, 185, 129, 0.1);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.map-node[data-stage="2"]:hover .node-icon-box,
+.map-node[data-stage="6"]:hover .node-icon-box {
+  border-color: var(--accent-gold);
+  background: rgba(245, 158, 11, 0.12);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+}
+
+.node-step {
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary-emerald);
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.node-name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-title);
+  text-align: center;
+  margin-top: 2px;
+}
+
+.map-connector {
+  flex: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.connector-line {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--border-color), var(--primary-emerald), var(--border-color));
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+/* Map Popover Card on Hover */
+.map-popover {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 280px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.map-node:hover .map-popover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.pop-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--primary-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.pop-badge.pop-emerald {
+  color: var(--primary-emerald);
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.pop-badge.pop-gold {
+  color: var(--accent-gold);
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.pop-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.pop-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.pop-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+
+.pop-action {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-emerald);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pop-action:hover {
+  color: var(--accent-gold);
+  text-decoration: underline;
+}
+
+.map-hint {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+}
+
+@media (max-width: 900px) {
+  .map-pipeline {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .map-connector {
+    display: none;
+  }
+  .map-popover {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+}
+
+
