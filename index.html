@@ -744,8 +744,15 @@
 
   <!-- Modal Fullscreen Slide -->
   <div id="slide-modal" class="modal-overlay">
-    <button id="modal-close" class="modal-close-btn">&times;</button>
-    <img id="modal-img" src="" alt="Slide Zoom" class="modal-content-img">
+    <button id="modal-close" class="modal-close-btn" onclick="closeFullscreenModal()">&times;</button>
+    <div class="slide-modal-container">
+      <button class="slide-modal-btn slide-modal-prev" onclick="changeFullscreenSlide(-1)" title="Slide Anterior (Seta Esquerda)">‹</button>
+      <div class="slide-modal-img-wrapper">
+        <img id="modal-img" src="" alt="Slide Zoom" class="modal-content-img" onclick="changeFullscreenSlide(1)" style="cursor: pointer;">
+        <div id="modal-slide-counter" class="slide-modal-counter">Slide 01 / 44</div>
+      </div>
+      <button class="slide-modal-btn slide-modal-next" onclick="changeFullscreenSlide(1)" title="Próximo Slide (Seta Direita)">›</button>
+    </div>
   </div>
 
   <!-- Modal Video Player -->

@@ -141,7 +141,7 @@ async function loadPresentationStacks() {
                   ${generateThumbnails(parteId, presIdx, pres.slidesFolder, pres.slidesCount)}
                 </div>
                 
-                <button class="btn-icon" onclick="openFullscreenModal('${pres.slidesFolder}', '${parteId}', ${presIdx})">
+                <button class="btn-icon" onclick="openFullscreenModal('${pres.slidesFolder}', '${parteId}', ${presIdx}, ${pres.slidesCount})">
                   🔍 Ampliar
                 </button>
               </div>
@@ -245,16 +245,81 @@ function initFullscreenModal() {
   }
 }
 
-window.openFullscreenModal = function(folder, parteId, presIdx) {
-  const modal = document.getElementById("slide-modal");
-  const modalImg = document.getElementById("modal-img");
-  const mainImg = document.getElementById(`img-${parteId}-${presIdx}`);
-
-  if (modal && modalImg && mainImg) {
-    modalImg.src = mainImg.src;
-    modal.classList.add("active");
-  }
+let currentModalState = {
+  parteId: null,
+  presIdx: null,
+  slideNum: 1,
+  totalCount: 1,
+  folder: ''
 };
+
+window.openFullscreenModal = function(folder, parteId, presIdx, totalCount) {
+  const key = `${parteId}-${presIdx}`;
+  const currentSlide = slideState[key] || 1;
+  
+  currentModalState = {
+    parteId: parteId,
+    presIdx: presIdx,
+    slideNum: currentSlide,
+    totalCount: totalCount || 44,
+    folder: folder
+  };
+
+  updateFullscreenModalUI();
+  
+  const modal = document.getElementById("slide-modal");
+  if (modal) modal.classList.add("active");
+};
+
+window.changeFullscreenSlide = function(direction) {
+  if (!currentModalState.folder) return;
+  
+  let next = currentModalState.slideNum + direction;
+  if (next < 1) next = currentModalState.totalCount;
+  if (next > currentModalState.totalCount) next = 1;
+  
+  currentModalState.slideNum = next;
+  
+  const key = `${currentModalState.parteId}-${currentModalState.presIdx}`;
+  slideState[key] = next;
+
+  updateFullscreenModalUI();
+  updateSlideUI(currentModalState.parteId, currentModalState.presIdx, next, currentModalState.totalCount);
+};
+
+function updateFullscreenModalUI() {
+  const modalImg = document.getElementById("modal-img");
+  const counterEl = document.getElementById("modal-slide-counter");
+  
+  if (modalImg && currentModalState.folder) {
+    const padded = String(currentModalState.slideNum).padStart(2, '0');
+    modalImg.src = `${currentModalState.folder}/slide_${padded}.png`;
+  }
+  
+  if (counterEl) {
+    const paddedNum = String(currentModalState.slideNum).padStart(2, '0');
+    const paddedTotal = String(currentModalState.totalCount).padStart(2, '0');
+    counterEl.textContent = `Slide ${paddedNum} / ${paddedTotal}`;
+  }
+}
+
+window.closeFullscreenModal = function() {
+  const modal = document.getElementById("slide-modal");
+  if (modal) modal.classList.remove("active");
+};
+
+document.addEventListener("keydown", (e) => {
+  const slideModal = document.getElementById("slide-modal");
+  if (slideModal && slideModal.classList.contains("active")) {
+    if (e.key === "ArrowLeft") {
+      changeFullscreenSlide(-1);
+    } else if (e.key === "ArrowRight" || e.key === " ") {
+      changeFullscreenSlide(1);
+    } else if (e.key === "Escape") {
+      closeFullscreenModal();
+    }
+  }
+});
 
 /* --------------------------------------------------------------------------
    5.5. Videoteca & Player Modal (videos.json)
