@@ -20,7 +20,7 @@
   <!-- Top Reading Progress Bar -->
   <div id="reading-progress"></div>
 
-  <!-- Header Navigation em Cascata -->
+  <!-- Header Limpo e Minimalista -->
   <header class="site-header">
     <div class="header-container">
       <a href="#hero" class="brand-logo">
@@ -31,43 +31,7 @@
         </div>
       </a>
       
-      <nav>
-        <ul class="nav-links">
-          <li class="nav-dropdown">
-            <button class="dropdown-toggle">O projeto ▾</button>
-            <div class="dropdown-menu">
-              <a href="#diagnostico">Diagnóstico e histórico</a>
-              <a href="#por-que-agora">Por que agora</a>
-              <a href="#roteiro">Roteiro de implantação</a>
-            </div>
-          </li>
-          <li class="nav-dropdown">
-            <button class="dropdown-toggle">Evidência e soberania ▾</button>
-            <div class="dropdown-menu">
-              <a href="#evidencia">Casos internacionais</a>
-              <a href="#soberania">Soberania nacional</a>
-            </div>
-          </li>
-          <li class="nav-dropdown">
-            <button class="dropdown-toggle">Solução e economia ▾</button>
-            <div class="dropdown-menu">
-              <a href="#solucao">Sistema de certificação</a>
-              <a href="#economia">Modelo econômico</a>
-            </div>
-          </li>
-          <li class="nav-dropdown">
-            <button class="dropdown-toggle">Recursos ▾</button>
-            <div class="dropdown-menu">
-              <a href="#videoteca">🎥 Videoteca pública</a>
-              <a href="#noticias">Canal de notícias</a>
-              <a href="#faq">Perguntas frequentes</a>
-              <a href="#downloads">Downloads e fontes</a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      
-      <div style="display: flex; align-items: center; gap: 10px;">
+      <div class="header-actions">
         <button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()">☀️ Dia</button>
         <a href="https://drive.google.com/file/d/1EeXMrtevxc-XDyd5yL2-Rr6NEjkyGd6z/view" target="_blank" rel="noopener" class="header-cta">
           📄 Baixar PDF
@@ -717,27 +681,65 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer com Navegação Completa do Portal -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <div class="footer-credit">Projeto e Pesquisa: <strong>Miguel do Rosário</strong>, jornalista</div>
+        <!-- Coluna 1: Marca & Créditos -->
+        <div class="footer-col-brand">
+          <a href="#hero" class="brand-logo footer-brand">
+            <div class="brand-icon">CMB</div>
+            <div>
+              <span class="brand-title">Casa da Moeda</span>
+              <span class="brand-sub">Controle Logístico Nacional</span>
+            </div>
+          </a>
           <p class="footer-disclaimer">
-            Documento de proposta pública de controle logístico e infraestrutura de certificação para a Casa da Moeda do Brasil.
+            Proposta de política pública para implantação do Sistema Nacional de Certificação, Rastreabilidade e Proteção da Cadeia de Custódia Logística.
           </p>
+          <div class="footer-credit">
+            Projeto & Pesquisa: <strong>Miguel do Rosário</strong> (Jornalista)
+          </div>
         </div>
-        <div>
-          <div style="font-weight: 600; color: var(--text-title); margin-bottom: 8px;">Aviso Legal</div>
-          <p class="footer-disclaimer">
-            Proposta independente de política pública.
-          </p>
+
+        <!-- Coluna 2: Navegação O Projeto & Soberania -->
+        <div class="footer-col-nav">
+          <h4 class="footer-nav-title">O Projeto & Soberania</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#diagnostico">Diagnóstico e Histórico</a></li>
+            <li><a href="#por-que-agora">Por Que Agora</a></li>
+            <li><a href="#roteiro">Roteiro de Implantação</a></li>
+            <li><a href="#evidencia">Casos Internacionais</a></li>
+            <li><a href="#soberania">Soberania Nacional</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Solução & Economia -->
+        <div class="footer-col-nav">
+          <h4 class="footer-nav-title">Solução & Economia</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#solucao">Sistema de Certificação</a></li>
+            <li><a href="#economia">Modelo Econômico</a></li>
+            <li><a href="#videoteca">🎥 Videoteca Pública</a></li>
+            <li><a href="#noticias">Canal de Notícias</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 4: Documentos & Download -->
+        <div class="footer-col-nav">
+          <h4 class="footer-nav-title">Documentação</h4>
+          <ul class="footer-nav-links">
+            <li><a href="https://drive.google.com/file/d/1EeXMrtevxc-XDyd5yL2-Rr6NEjkyGd6z/view" target="_blank" rel="noopener">📄 Baixar Artigo (PDF)</a></li>
+            <li><a href="#downloads">Downloads e Fontes</a></li>
+            <li><a href="#hero">↑ Voltar ao Topo</a></li>
+          </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <div>© 2026 Casa da Moeda do Brasil · Controle Logístico Nacional</div>
-        <div>Desenvolvido com o ecossistema Antigravity</div>
+        <div>© 2026 Casa da Moeda do Brasil · Todos os direitos reservados</div>
+        <div class="footer-bottom-tag">Desenvolvido com o ecossistema Antigravity</div>
       </div>
     </div>
   </footer>
